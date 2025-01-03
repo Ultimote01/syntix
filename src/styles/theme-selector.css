@@ -1,0 +1,168 @@
+.shadowblack_15{
+    --tw-shadow-color:rgb(0 0 0 /0.5);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    --tw-shadow:var(--tw-shadow-colored)
+}
+
+.sr_only{
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border-width: 0;
+}
+
+.listboxbutton-themeselector{
+    display: flex;
+    height: 24px;
+    width: 24px;
+    background-color: rgb(255,255,255);
+    border-radius: 8px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 4px 6px -1px, rgba(0, 0, 0, 0.05) 0px 2px 4px -2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightIcon{
+ height: 16px;
+ width: 16px;
+}
+
+.lightIconOpt1{
+    fill: #94a3b8;
+}
+
+.lightIconOpt2{
+    fill: #38bdf8;
+}
+
+.darkIcon{
+    height: 16px;
+    width: 16px;
+    display: none;
+}
+
+.darkIconOpt1{
+    fill: #94a3b8;
+}
+
+.darkIconOpt2{
+    fill: #38bdf8;
+}
+
+
+.dark .listboxbutton-themeselector{
+    background-color: rgb(51, 65, 85);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.05) 0px 4px 6px -1px, rgba(0, 0, 0, 0.05) 0px 2px 4px -2px
+}
+
+.dark .lightIcon{
+    display: none;
+}
+
+.dark .darkIcon{
+    display: block;
+}
+
+.listboxOpt-themeselector{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-top: 12px;
+    padding: 0.75rem;
+    width: 144px;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    font-size: 14px;
+    background-color: white;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 4px 6px -1px, rgba(0, 0, 0, 0.05) 0px 2px 4px -2px;
+    font-weight: 500;
+  
+    
+}
+
+ 
+.listboxOpts-themeselector{
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    border-radius: 0.625rem;
+    padding: 4px;
+}
+
+.listboxOpts-themeselector:nth-child(n + 2){
+    margin-top: 4px;
+}
+
+
+.listboxOpts-themeselector-opt1{
+color: rgb(14 165 233);;
+}
+
+.listboxOpts-themeselector-opt2{
+    color: rgb(15 23 42);
+}
+
+
+.listboxOpts-themeselector-opt3{
+    color: rgb(51 65 85);
+}
+
+.listboxOpts-themeselector-opt4{
+    background-color: rgb(241 245 249);
+}
+
+.listOptselected-themeselector{
+    border-radius:6px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(15, 23, 42, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+    padding: 4px;
+}
+
+.themeIcon-themeselector{
+    height: 16px;
+    width: 16px;
+}
+
+.themeIcon-themeselectorOpt1{
+    fill: #38bdf8;
+}
+
+.themeIcon-themeselectorOpt2{
+    fill: #94a3b8;
+}
+
+.dark .themeIcon-themeselectorOpt1{
+    fill: #38bdf8;
+}
+
+.dark .listOptselected-themeselector{
+    background-color: rgb(51, 65, 85);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+}
+
+.dark .listboxOpts-themeselector-opt2{
+    color: white;
+}
+
+.dark .listboxOpts-themeselector-opt3{
+    color: rgb(148 163 184);
+}
+
+.dark .listboxOpts-themeselector-opt4{
+    background-color: rgba(15, 23, 42, 0.4);
+}
+
+
+
+.dark .listboxOpt-themeselector{
+    background-color: rgb(30, 41, 59);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 4px 6px -1px, rgba(0, 0, 0, 0.05) 0px 2px 4px -2px
+}
+
+ 

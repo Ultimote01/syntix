@@ -1,0 +1,192 @@
+ 
+
+.prose{
+    --prose-body: #334155;
+    --prose-headings: #0f172a;
+    --prose-lead: #475569;
+    --prose-links: #0f172a;
+    --prose-bold: #0f172a;
+    --prose-counters: #64748b;
+    --prose-bullets: #cbd5e1;
+    --prose-hr: #e2e8f0;
+    --prose-quotes: #0f172a;
+    --prose-quote-borders: #e2e8f0;
+    --prose-captions: #64748b;
+    --prose-kbd: #0f172a;
+    --prose-kbd-shadows: 15 23 42;
+    --prose-code: #0f172a;
+    --prose-pre-code: #e2e8f0;
+    --prose-pre-bg: #1e293b;
+    --prose-th-borders: #cbd5e1;
+    --prose-td-borders: #e2e8f0;
+    max-width: none;
+  
+}
+
+.token.attr-value, .token.class, .token.string, .token.property {
+    color: #7dd3fc;
+}
+
+.prose:where(.dark, .dark *){
+    --prose-body: #cbd5e1;
+    --prose-headings: #fff;
+    --prose-lead: #94a3b8;
+    --prose-links: #fff;
+    --prose-bold: #fff;
+    --prose-counters: #94a3b8;
+    --prose-bullets: #475569;
+    --prose-hr: #334155;
+    --prose-quotes: #f1f5f9;
+    --prose-quote-borders: #334155;
+    --prose-captions: #94a3b8;
+    --prose-kbd: #fff;
+    --prose-kbd-shadows: 255 255 255;
+    --prose-code: #fff;
+    --prose-pre-code: #cbd5e1;
+    --prose-pre-bg: rgb(0 0 0 / 50%);
+    --prose-th-borders: #475569;
+    --prose-td-borders: #334155;
+}
+
+.prose  :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-proses"],[class~="not-proses"] *))) {
+    scroll-margin-top: 7rem;
+    font-weight: 400;
+    font-family: lexend sans-serif;
+    font-size: 1.5rem;
+}
+
+.prose :where(hr + *):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    margin-top: 0;
+}
+ 
+
+.prose :where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    color: var(--prose-headings) ;
+    line-height: 1.3333333;
+    margin-bottom: 1em; 
+}
+
+.prose :where(h3):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    color: var(--prose-headings);
+    line-height: 1.6;
+    margin-bottom: 0.6em;
+    margin-top: 1.6em;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+
+
+
+.prose :where(p):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.prose :where(p):not(:where([class~="not-prose"],[class~="not-prose"] *)):where(.dark, .dark *) {
+   color: rgb(148 163 184 / 1);
+  
+}
+
+.prose :where(h2 + *):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    margin-top: 0;
+}
+
+
+.prose :where(hr):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    border-color: var(--prose-hr);
+    border-top-width: 1px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.prose :is(:where(a):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+    text-decoration-line: none;
+    color: rgb(120 53 15 / 1);
+    font-weight: 600;
+   
+}
+
+
+pre[class*='language-'] {
+    color: #f8fafc;
+}
+
+.prose :is(:where(pre):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+    border-radius: 0.75rem;
+    background-color: rgb(15 23 42 / 1);
+    font-size: .85rem;
+    padding-left: 1.10rem;
+    padding-bottom: .25em;
+}
+
+
+.prose :is(:where(pre):not(:where([class~="not-prose"],[class~="not-prose"] *))):where(.dark, .dark *) {
+    background-color: rgb(30 41 59 / 0.6);
+}
+ 
+
+.prose :is(:where(h2):is(:where([class~="quicklink-h2"],[class~="quicklink-h2"] *))){
+    font-size: 1rem;
+}
+
+.language-shell{
+    height: 3rem;
+    line-height: 3rem;
+}
+
+ 
+.prose :is(:where(p):is(:where([class~="callout-note-title"],[class~="callout-note-title"] *))){
+    color: rgb(12 74 110 / 1);
+}
+
+.prose :is(:where(p):is(:where([class~="callout-note-title"],[class~="callout-note-title"] *))):where(.dark, .dark *){
+    color: rgb(56 189 248 / 1 );
+    
+}
+
+.prose :is(:where(p):is(:where([class~="callout-warning-title"],[class~="callout-warning-title"] *))):where(.dark, .dark *){
+    color: rgb(245 158 11 / 1 );
+    
+}
+
+
+.prose code::before{
+    content: '`';
+}
+
+.prose code::after{
+    content: '`';
+}
+
+.lead{
+    color: rgb(100 116 139 / 1);
+    font-size: 1.25em;
+    line-height: 1.6;
+    margin-bottom: 1.2em;
+}
+
+.lead:where(.dark , .dark *){
+    color: rgb(148  163 184 / 1);
+}
+
+.fence{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+/* Smaller screen size */
+@media (min-width: 640px){
+    .fence{
+        overflow-x: auto;
+    }
+}
+
+/* Large screen size  */
+@media (min-width: 1024px){
+
+    .prose  :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-proses"],[class~="not-proses"] *))) {
+        scroll-margin-top: 8.5rem;
+    }
+    
+}

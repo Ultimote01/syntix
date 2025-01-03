@@ -1,0 +1,270 @@
+.layout{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.layout2{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 100%;
+    max-width: 88rem;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+.layout3{
+    display: none;
+}
+
+.layout4{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50vw;
+    background-color: rgb(248 250 252);
+}
+
+
+.layout4:where(.dark, .dark *){
+    display: none;
+}
+
+.layout5{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 1px;
+    top: 4rem;
+    background-image: linear-gradient(to top, rgb(30, 41, 59), rgba(30, 41, 59, 0));
+    height: 3rem;
+    display: none;
+}
+
+.layout5:where(.dark, .dark *){
+    display: block;
+}
+
+.layout6{
+    position: absolute;
+    background-color: rgb(30 41 59 / 1 );
+    width: 1px;
+    display: none;
+    top: 7rem;
+    right: 0px;
+    bottom: 0px;
+}
+
+.layout6:where(.dark, .dark *){
+    display: none;
+}
+
+.layout7{
+    position: sticky;
+    padding-right: 2rem;
+    padding-left: 0.125rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 16rem;
+    height: calc(100vh - 4.75rem);
+    margin-left: -0.125rem;
+    top: 4.75rem;
+
+}
+
+.header{
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: rgba(0,0,0,0) 0px 0px 0px 0px,rgba(0,0,0,0) 0px 0px 0px 0px,rgba(15,23,42,0.05) 0px 4px 6px -1px,rgba(15,23,42,0.05) 0px 2px 4px -2px;
+    transition-duration: 0.5s;
+    transition-property: color , background-color, border-color, text-decoration-color, fill , stroke ,opacity,box-shadow, filter, backdrop-filter,-webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    
+}
+.header_opt1{
+font-family: inherit;
+}
+
+.header_opt2{
+    font-family: inherit;
+}
+
+.header1{
+    display: flex;
+    margin-right: 24px;
+}
+
+.header2{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+}
+
+.logomark-header{
+    height: 36px;
+    width: 36px;
+}
+
+.logo-header{
+    display: none;
+    height: 36px;
+    width: auto;
+    fill: rgb(51, 65, 85);
+     
+}
+
+.header3{
+    margin-top: -20px;
+    margin-bottom: -20px;
+    margin-right: 24px;
+}
+ 
+.header4{
+    position: relative;
+    display: flex;
+    flex-basis: 0;
+    justify-content: flex-end;
+    row-gap: 24px;
+    column-gap: 24px;
+}
+
+
+.githubicon-header{
+    height: 24px;
+    width: 24px;
+    fill: rgb(148, 163, 184);
+}
+
+.githubicon-header:hover{
+    fill: #64748b;
+}
+
+.theme_selector{
+    position: relative;
+    z-index: 10;
+}
+
+.dark .header{
+    box-shadow: none
+}
+
+.dark .header-opt1{
+    background-color: rgba(15,23,42,0.75);
+    backdrop-filter: blur(8px);
+}
+.dark .logo{
+    fill: #e0f2fe;
+}
+
+.dark .githubicon-header:hover{
+    fill: #cbd5e1;
+}
+
+@supports(backdrop-filter: blur(0)){
+  .dark .header-opt1{
+    background-color: rgba(15,23,42,0.75);
+  }
+}
+
+.dark .header-opt2{
+    background-color:transparent;
+}
+
+ 
+
+
+/* Smaller screen size */
+@media (min-width:640px) {
+    .layout2{
+        padding-left: 0.5rem; /* 8px */
+        padding-right: 0.5rem; /* 8px */
+    }
+    .header{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .header3{
+        margin-right: 34px;
+    }
+
+    .header4{
+        row-gap: 32px;
+        column-gap: 32px;
+    }
+}
+
+/* Medium screen size */
+@media (min-width: 768px) { 
+     .header3{
+        margin-right: 0;
+     }
+
+     .header4{
+        flex-grow: 1;
+     }
+}  
+
+/* Large screen size */
+@media (min-width:1024px){
+    .layout2{
+        padding-left: 2rem; /* 32px */
+        padding-right: 2rem; /* 32px */
+    }
+    .header{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .header1{
+        display: none;
+    }
+
+    .logomark-header{
+        display: none;
+    }
+
+    .logo-header{
+        display: block;
+    }
+
+    .logo-header:where(.dark,.dark *){
+       fill: rgb(255, 255, 255);
+    }
+
+    .layout3{
+        display: block;
+        position:relative;
+        flex: none;
+    }
+}
+
+@media (min-width:1280px){
+    .layout2{
+        padding-left: 3rem; /* 48px */
+        padding-right: 3rem; /* 48px */
+    }
+
+    .layout7{
+        padding-right: 4rem;
+        width: 18rem;
+    }
+}

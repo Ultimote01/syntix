@@ -1,0 +1,82 @@
+.mobilenav{
+    position: relative;
+}
+
+
+.menu-icon-mobilenav{
+    stroke: #64748b;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.dialog-mobilenav{
+        position: fixed;
+        inset: 0px ;
+        z-index: 50;
+        display: flex;
+        align-items: flex-start;
+        overflow-y: auto;
+        backdrop-filter: blur(8px);
+        background-color: rgba(15, 23, 42, 0.5);
+        padding-right: 40px; 
+}
+
+.dialogpanel-mobilenav{
+    padding-top: 1.25rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgb(255 255 255 / 1);
+    max-width: 20rem;
+    width: 100%;
+    min-height: 100%;
+}
+
+
+.dialogpanel-mobilenav:where(.dark,.dark *){
+    background-color: rgba(15, 23, 42, 1);
+}
+
+
+.mobilenav1{
+    display: flex;
+    align-items: center;
+}
+
+.closeIcon{
+     stroke:  #64748b;
+     width: 1.5rem;
+     height: 1.5rem;
+}
+
+.mobilenav2{
+    margin-top: 1.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+
+/* Smaller screen */
+
+@media (min-width: 640px){
+    .dialogpanel-mobilenav{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+
+/* Large screen */
+
+@media (min-width: 1024px){
+    .dialog-mobilenav{
+        display: none;
+    }
+
+    .mobilenav2{
+        font-size: 0.875rem; 
+        line-height: 1.25rem
+    }
+}

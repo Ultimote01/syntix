@@ -1,0 +1,44 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark{
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+ 
+ 
+
+.root-layout-html{
+height: 100%;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+
+.root-layout-body{
+  min-height: 100%;
+  display: flex;
+  background-color: var(--background);
+}
+
+.dark .root-layout-body{
+  --background: rgb(15 23 42);
+}
+
+button {
+  touch-action: manipulation;
+}
+
+ 
+
+
+
+@font-face {
+  font-family: 'lexend';
+  src: url("../../src/fonts/lexend.woff2") format('woff2');
+}
+
+ 

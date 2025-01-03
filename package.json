@@ -9,9 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@algolia/autocomplete-core": "^1.9.2",
+    "@headlessui/react": "^2.1.0",
+    "@markdoc/markdoc": "^0.4.0",
+    "@markdoc/next.js": "^0.3.4",
+    "@sindresorhus/slugify": "^2.1.0", 
+    "autoprefixer": "^10.4.12",
+    "clsx": "^2.1.0",
+    "fast-glob": "^3.2.12",
+    "flexsearch": "^0.7.31",
+    "js-yaml": "^4.1.0",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "next-themes": "^0.2.1",
+    "prism-react-renderer": "^2.0.6",
+    "next": "15.0.3",
+    "react-highlight-words": "^0.20.0",
+    "simple-functional-loader": "^1.2.1"
   },
   "devDependencies": {
     "eslint": "^8",
