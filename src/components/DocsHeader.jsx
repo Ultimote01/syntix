@@ -19,12 +19,12 @@ export function DocsHeader({ title }) {
   return (
     <header className="docsheader">
       {section && (
-        <p className="">
+        <p >
           {section.title}
         </p>
       )}
       {title && (
-        <h1 className="">
+        <h1 >
           {title}
         </h1>
       )}

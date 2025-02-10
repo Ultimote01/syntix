@@ -56,6 +56,12 @@ export function MobileNavigation() {
 
   function onLinkClick(event) {
     let link = event.currentTarget
+    console.log(
+      link,
+      link.pathname,
+      link.search,
+      link.hash
+    )
     if (
       link.pathname + link.search + link.hash ===
       window.location.pathname + window.location.search + window.location.hash

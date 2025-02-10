@@ -6,11 +6,7 @@ import withSearch from './src/markdoc/search.mjs'
 
 const nextConfig = {
     reactStrictMode:true,
-    pageExtensions:['jsx','js','md','mdx']
+    pageExtensions:['jsx','js','md']
 };
-
-
-export default withSearch(
-    withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig),
-  )
-  
+ 
+export default withSearch( withMarkdoc({schemaPath:'./src/markdoc/'})(nextConfig));

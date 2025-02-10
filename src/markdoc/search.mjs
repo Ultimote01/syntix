@@ -6,6 +6,7 @@ import * as path from 'path'
 import { createLoader } from 'simple-functional-loader'
 import * as url from 'url'
 
+
 const __filename = url.fileURLToPath(import.meta.url)
 const slugify = slugifyWithCounter()
 
@@ -42,7 +43,7 @@ function extractSections(node, sections, isRoot = true) {
   }
 }
 
-export default function withSearch(nextConfig = {}) {
+export default function withSearch(nextConfig) {
   let cache = new Map()
 
   return Object.assign({}, nextConfig, {
@@ -56,8 +57,7 @@ export default function withSearch(nextConfig = {}) {
 
             let files = glob.sync('**/page.md', { cwd: pagesDir })
             let data = files.map((file) => {
-              let url =
-                file === 'page.md' ? '/' : `/${file.replace(/\/page\.md$/, '')}`
+              let url =file === 'page.md' ? '/' : `/${file.replace(/\/page\.md$/, '')}`
               let md = fs.readFileSync(path.join(pagesDir, file), 'utf8')
 
               let sections
@@ -133,6 +133,7 @@ export default function withSearch(nextConfig = {}) {
       if (typeof nextConfig.webpack === 'function') {
         return nextConfig.webpack(config, options)
       }
+      console.log(config)
 
       return config
     },

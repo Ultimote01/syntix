@@ -28,6 +28,7 @@ function GitHubIcon(props) {
   
     useEffect(() => {
       function onScroll() {
+        console.log('running')
         setIsScrolled(window.scrollY > 0)
       }
       onScroll()
@@ -60,7 +61,7 @@ function GitHubIcon(props) {
         </div>
         <div className="header4">
           <ThemeSelector className={'theme_selector'} />
-          <Link href="https://github.com" className="group" aria-label="GitHub">
+          <Link href="https://github.com/ultimote01" className="group" aria-label="GitHub">
             <GitHubIcon className="githubicon-header" />
           </Link>
         </div>
@@ -80,6 +81,7 @@ export default function Layout({children}){
         <Header/>
 
         {isHomePage && <Hero/>}
+       
        
         <div className={'layout2'}>
         <div className='layout3'>

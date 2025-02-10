@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
     suppressHydrationWarning>
       <body className={'root-layout-body'}>
         <Providers>
-        <Layout> 
+        <Layout>  
         {children}
         </Layout>
         </Providers>
